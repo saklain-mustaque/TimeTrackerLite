@@ -48,3 +48,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch (git push origin feature/new-feature).
 5. Open a Pull Request.
 
+## Website
+
+Visit the [Stopwatch Website](https://saklain-mustaque.github.io/TimeTrackerLite/stopWatch.html) for live demonstration.
+
