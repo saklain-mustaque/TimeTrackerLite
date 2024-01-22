@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stopwatch Website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></head>
+</head>
+
+<body>
+    <div class="top-half">
+        <div class="stopwatch-container">
+            <div id="stopwatch">00:00:00</div>
+            <div class="buttons-container">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
+                <button onclick="saveData()">Save</button>
+                <button onclick="downloadPDF()">Download PDF</button>
+            </div>
+            <div id="totalTime"></div>
+        </div>
+
+    </div>
+    
+    <div class="bottom-half" style="height: 50vh;">
+        <div class="divider"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Total Time</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="divider"></div>
+        <table>
+            <tbody id="row-data">
+                <!-- Data will be added dynamically here -->
+            </tbody>
+        </table>
+        <table>
+            <tbody id="total-row" class="row-data-container total-row"></tbody>
+        </table>
+    </div>
+    <script src="stopWatch.js"></script>
+    <script>
+        function downloadPDF() {
+            // Check if html2pdf is defined before using it
+            if (typeof html2pdf !== 'undefined') {
+                const element = document.body;
+                html2pdf(element, {
+                    margin: 10,
+                    filename: 'stopwatch.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                });
+            } else {
+                console.error('html2pdf is not defined. Make sure the library is properly included.');
+            }
+        }
+    </script>
+</body>
+
+</html>

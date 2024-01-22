@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.stopwatch-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#stopwatch {
+    font-size: 6em;
+    margin-bottom: 10px;
+}
+
+.buttons-container button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 1em;
+}
+
+.divider {
+    border-top: 2px solid #ccc;
+    width: 100%;
+}
+
+.columns-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.column {
+    flex-basis: 30%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.top-half{
+    height: 50vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+td{
+border: 1px solid #ccc;
+}
+
+.row-data-container {
+    padding: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.row-data-container .column {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.total-row {
+    font-weight: bold;
+}
