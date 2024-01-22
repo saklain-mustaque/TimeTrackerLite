@@ -9,7 +9,7 @@ This is a simple web-based stopwatch application with additional features like t
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Website](#website)
 
 ## Features
 
